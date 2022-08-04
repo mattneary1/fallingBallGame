@@ -1,0 +1,182 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+    text-align: center;
+    font-family: 'Odibee Sans', cursive;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    animation: fadeIn 5s;
+}
+
+#titleStart {
+    color: red;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#game {
+    width: 250px;
+    height: 300px;
+    background-color: black;
+    border: 1px solid black;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+#character {
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+    position: relative;
+    top: 200px;
+    left: 120px;
+    z-index: 3;
+}
+
+#score {
+    color: red;
+    margin-left: 15px;
+}
+
+.block {
+    height: 10px;
+    width: 250px;
+    background-color: white;
+    margin-top: -10px;
+    position: relative;
+    top: 50px;
+}
+
+.hole {
+    height: 10px;
+    width: 30px;
+    background-color: black;
+    margin-top: -10px;
+    position: relative;
+    top: 100px;
+}
+
+button {
+    width: 100px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    color: red;
+    font-size: 1.2rem;
+    touch-action: manipulation;
+}
+
+#startButton {
+    animation: grow-and-shrink 2s infinite;
+    margin-bottom: 50px;
+}
+
+#newGame {
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: red;
+    color: white;
+    box-shadow: 1px 1px;
+    cursor: pointer;
+}
+
+#leftButton, #rightButton {
+    margin-left: 9px;
+}
+
+#leftButton:hover {
+    box-shadow: -1px 1px;
+}
+
+a {
+    margin-left: 2px;
+    color: red;
+}
+a:hover {
+    color: lightCoral;
+}
+
+.ball {
+    z-index: 1;
+    opacity: 0;
+    display: block;
+    width: 100px;
+    height: 100px;
+    background: red;
+    border-radius: 50%;
+    background: -webkit-radial-gradient(25px 25px, circle, red, #000);
+    background: -moz-radial-gradient(25px 25px, circle, red, #000);
+    background: radial-gradient(25px 25px, circle, red, #000);
+    animation: spin 1s linear infinite, moveLeftToRight 3s linear;
+    position: absolute;
+    left: 0;
+}
+
+@keyframes spin {
+    0% { 
+        transform: rotate(0deg); 
+    }
+    100% { 
+        transform: rotate(360deg); 
+    }
+}
+
+@keyframes moveLeftToRight {
+    0%   { 
+        left: -100px; 
+        opacity: 1;
+    }
+    98% {
+        opacity: 1;
+    }
+    100% { 
+        left: 100%; 
+        opacity: 0;
+    }
+}
+
+@keyframes grow-and-shrink {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+}
+
+@keyframes fadeIn {
+    0% { 
+        opacity: 0; 
+    }
+    100% { opacity: 1; 
+    }
+}
