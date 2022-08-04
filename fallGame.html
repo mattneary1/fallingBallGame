@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fallGame.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap" rel="stylesheet">
+    <title>nearyGames - Falling Ball</title>
+    <link rel="icon" type="image/x-icon" href="/img/nearyGames.png">
+</head>
+<body>
+    <div class="container">
+        <div id="game">
+            <div id="character"></div>
+        </div>
+        <div class="buttons">
+            <button id="leftButton" onclick="moveLeftMobile()">Left</button>
+            <button id="rightButton" onclick="moveRightMobile()">Right</button>
+        </div>
+        <button id="newGame" onclick="location.reload()">New Game</button>
+        <footer>
+            <h1>Score: <span id="score">0</span></h1>
+            <p>Game by: <a href="https://nearygames.com">nearyGames</a></p>
+        </footer>
+    </div>
+    <script src="fallGame.js"></script>
+</body>
+</html>
